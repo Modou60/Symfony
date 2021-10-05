@@ -28,9 +28,12 @@ class HomeController extends AbstractController
     }
 
 
+    /** @Route("/apropos", name="index_apropos") 
+     */
+
     public function apropos(): Response
     {
-        return $this->render('home/index.html.twig', [
+        return $this->render('home/apropos.html.twig', [
             'controller_name' => 'HomeController',
         ]);
     }
@@ -45,9 +48,9 @@ class HomeController extends AbstractController
 
     /** @Route("/programme", name="index_programme") 
      */
-   
-    
-      public function programme()
+
+
+    public function programme()
     {
         return $this->render(
             'home/programme.html.twig',
@@ -60,17 +63,17 @@ class HomeController extends AbstractController
     /** @Route("/actualite", name="index_actualite") 
      */
 
-      public function actualite()
-     {
-         return $this->render(
-             'home/actualite.html.twig',
-             [
-                 'controller_name' => 'index_actualite',
-             ]
-         );
-     }
+    public function actualite()
+    {
+        return $this->render(
+            'home/actualite.html.twig',
+            [
+                'controller_name' => 'index_actualite',
+            ]
+        );
+    }
 
-     /** @Route("/gallerie", name="index_gallerie") 
+    /** @Route("/gallerie", name="index_gallerie") 
      */
 
     public function gallerie()
@@ -82,7 +85,4 @@ class HomeController extends AbstractController
             ]
         );
     }
-  
-
-   
 }
